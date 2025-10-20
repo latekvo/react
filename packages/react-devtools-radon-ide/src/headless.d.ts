@@ -22,6 +22,9 @@ import type {
   ProfilingDataFrontend,
 } from 'react-devtools-inline/frontend';
 
+// TODO: Check if it's available in 'react-devtools-inline/frontend'
+import type {StateContext} from 'react-devtools-shared/src/devtools/views/Components/TreeContext';
+
 // Define function signatures using the locally imported types
 export function createBridge(wall: Wall): FrontendBridge;
 export function createStore(bridge: FrontendBridge, config?: Config): Store;
@@ -31,3 +34,8 @@ export function prepareProfilingDataExport(
 export function prepareProfilingDataFrontendFromExport(
   exportString: any,
 ): ProfilingDataFrontend;
+export function printStore(
+  store: Store,
+  includeWeight: boolean = false,
+  state: StateContext | null = null,
+): string;

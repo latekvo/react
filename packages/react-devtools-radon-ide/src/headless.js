@@ -11,6 +11,7 @@ export {
   prepareProfilingDataExport,
   prepareProfilingDataFrontendFromExport,
 } from 'react-devtools-shared/src/devtools/views/Profiler/utils';
+export {printStore} from 'react-devtools-shared/src/devtools/utils';
 
 export function createStore(bridge: FrontendBridge, config?: Config): Store {
   return new Store(bridge, {
